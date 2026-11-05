@@ -1,0 +1,39 @@
+//COMSOL Geometry for Selected Segments
+clearModel(model);
+model.modelNode().create("comp1");
+model.geom().create("geom", 3);
+model.geom("geom").lengthUnit("um");
+//Segments: [22 26 30]
+model.geom("geom").create("cone22", "Cone");
+model.geom("geom").feature("cone22").set("specifytop", "radius");
+model.geom("geom").feature("cone22").set("rtop", 17.2863);
+model.geom("geom").feature("cone22").set("r", 17.2863);
+model.geom("geom").feature("cone22").set("h", 300);
+model.geom("geom").feature("cone22").set("pos", new double[]{2548.5821, 10600.4143, 8.6431});
+model.geom("geom").feature("cone22").set("axistype", "spherical");
+model.geom("geom").feature("cone22").set("axis", new double[]{285.7283, 91.4293, 0});
+model.geom("geom").create("cone26", "Cone");
+model.geom("geom").feature("cone26").set("specifytop", "radius");
+model.geom("geom").feature("cone26").set("rtop", 17.2863);
+model.geom("geom").feature("cone26").set("r", 17.2863);
+model.geom("geom").feature("cone26").set("h", 300);
+model.geom("geom").feature("cone26").set("pos", new double[]{2834.3104, 10691.8436, 8.6431});
+model.geom("geom").feature("cone26").set("axistype", "spherical");
+model.geom("geom").feature("cone26").set("axis", new double[]{298.3287, 31.6223, 0});
+model.geom("geom").create("cone30", "Cone");
+model.geom("geom").feature("cone30").set("specifytop", "radius");
+model.geom("geom").feature("cone30").set("rtop", 17.2863);
+model.geom("geom").feature("cone30").set("r", 17.2863);
+model.geom("geom").feature("cone30").set("h", 300);
+model.geom("geom").feature("cone30").set("pos", new double[]{3132.6392, 10723.4659, 8.6431});
+model.geom("geom").feature("cone30").set("axistype", "spherical");
+model.geom("geom").feature("cone30").set("axis", new double[]{258.796, 151.7386, 0});
+model.geom("geom").create("sph21", "Sphere");
+model.geom("geom").feature("sph21").set("r", 17.3863);
+model.geom("geom").feature("sph21").set("pos", new double[]{2834.3104, 10691.8436, 8.6431});
+model.geom("geom").create("sph24", "Sphere");
+model.geom("geom").feature("sph24").set("r", 17.3863);
+model.geom("geom").feature("sph24").set("pos", new double[]{3132.6392, 10723.4659, 8.6431});
+model.geom("geom").run();
+//
+//End of geometry
